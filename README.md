@@ -12,7 +12,7 @@ This dashboard build with React Js, with SCSS inside to make the stylesheet.
 
 ## Package Used
 
--[recharts](https://recharts.org/en-US/) (For charts)
+- [recharts](https://recharts.org/en-US/) (For charts)
 
 Use the npm to install recharts
 ```bash
@@ -20,5 +20,5 @@ Use the npm to install recharts
   ```
   
 What I used from rechars?
--LineCharts
--BarCharts
+- LineCharts
+- BarCharts
