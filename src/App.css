@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
+body {
+  background-color: #ebebeb;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin-left: 1em;
+  color: #31313f;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.scroll-box::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f1f3fa;
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f1f3fa;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #5a5a81;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f1f3fa;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f1f3fa;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #5a5a81;
+}
+
+.scroll-box {
+  width: 100%;
+  height: 70%;
+  overflow: auto;
+}
+
+.scroll-box .scroll-list {
+  width: 97%;
+  height: 4em;
+  padding-left: .5em;
+  background-color: #f1f3fa;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+}
+
+.scroll-box .scroll-list:hover {
+  background-color: #5a5a81;
+}
+
+.scroll-box .scroll-list:hover .main-data {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.scroll-box .scroll-list:hover .sub-data {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.scroll-box .scroll-list .main-data {
+  padding-top: .5em;
+  margin-bottom: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #31313f;
+  margin-top: .3em;
+}
+
+.scroll-box .scroll-list .sub-data {
+  margin-top: 0;
+  color: darkgray;
+  font-size: .8em;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-container {
+  width: 85%;
+  height: auto;
+  float: left;
+  padding: 0 1em 1em;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+}
+
+.content-container .col-3 {
+  width: 30%;
+  height: 30vh;
+  padding: 8px;
+  float: left;
+}
+
+.content-container .col-3-wide {
+  width: 61%;
+  height: 30vh;
+  padding: 8px;
+  float: left;
+}
+
+.content-container .col-3-large {
+  width: 61%;
+  height: 61vh;
+  padding: 8px;
+  float: left;
+}
+
+.content-container .col-3-tall {
+  width: 30%;
+  height: 61vh;
+  padding: 8px;
+  float: left;
+}
+
+.content-container .col-2 {
+  width: 50%;
+  height: auto;
+  padding: 8px;
+  float: left;
+}
+
+.content-container .col-1 {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+  float: left;
+  padding: 0;
+}
+
+.content-container .col-1-card {
+  width: 100%;
+  height: 30vh;
+  padding: 8px;
+  float: left;
+  padding: 0;
+  margin-bottom: 2%;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .content-container .col-3, .content-container .col-1, .content-container .col-2, .content-container .col-3-wide, .content-container .col-1-card, .content-container .col-3-tall {
+    width: 100%;
   }
 }
+
+.sidebar-container {
+  width: 15%;
+  float: left;
+}
+
+.sidebar-container .sidebar {
+  background-color: #31313f;
+  position: fixed;
+  width: inherit;
+  height: 100vh;
+}
+
+.sidebar-container ul {
+  margin-top: 3em;
+  padding: 0;
+}
+
+.sidebar-container li {
+  color: whitesmoke;
+  text-align: left;
+  font-size: 1.3em;
+  padding: 1em;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+}
+
+.sidebar-container li:hover {
+  background-color: #4a4a5e;
+}
+
+.sidebar-container p {
+  color: whitesmoke;
+  text-align: left;
+  font-size: 1.3em;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 12.8%;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+}
+
+.sidebar-container p:hover {
+  background-color: #4a4a5e;
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    display: none;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  border-color: #31313f;
+  border-width: .2px;
+  border-style: solid;
+  padding-left: .5em;
+}
+
+.card .card-title {
+  text-align: center;
+  font-size: 1.2em;
+  color: #31313f;
+  padding-top: .5em;
+}
+
+.card .card-title.white {
+  color: whitesmoke;
+}
+
+.card.income {
+  background-color: #7dbd80;
+  border-color: #7dbd80;
+}
+
+.card.outcome {
+  background-color: #CE5D5D;
+  border-color: #CE5D5D;
+}
+
+.card .highlight-text {
+  font-size: 4em;
+  font-weight: bold;
+  opacity: .8;
+  margin-left: .5em;
+  color: whitesmoke;
+}
+/*# sourceMappingURL=App.css.map */
