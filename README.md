@@ -1,6 +1,6 @@
 # Sales Dashboard Front-End
 
-This dashboard front-end made for technical test as a web developer on Ossera. The test required me to make a page of dashboard.
+This dashboard front-end was made for the technical test as a web developer on Ossera. The test required me to make a page of the dashboard.
 
 ## Deployed Site
 
@@ -19,6 +19,6 @@ Use the npm to install recharts
   npm i recharts
   ```
   
-What I used from rechars?
+What did I use from recharts?
 - LineCharts
 - BarCharts
