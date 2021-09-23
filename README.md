@@ -1,6 +1,6 @@
 # Sales Dashboard Front-End
 
-This dashboard front-end was made for the technical test as a web developer on Ossera. The test required me to make a page of the dashboard.
+This dashboard front-end was made for the technical test as a front-end on Ossera. The test required me to make a page of the dashboard.
 
 ## Deployed Site
 
